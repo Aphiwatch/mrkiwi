@@ -16,7 +16,6 @@
 docker-compose up -d --build
 ```
 
-Frontend Ui run on port [3000](http://localhost:3000)
-
-Backend Ui run on port [8080](http://localhost:8080)
+- Frontend Ui run on port [3000](http://localhost:3000)
+- Backend run on port [8080](http://localhost:8080)
 
