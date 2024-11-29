@@ -5,10 +5,11 @@ tmp_dir = "tmp"
   bin = "./main"                        # ไฟล์ที่สร้างขึ้นหลัง build
   cmd = "go build -o ./main ."          # คำสั่ง build โค้ด
   delay = 1000                          # หน่วงเวลา 1 วินาทีระหว่าง build
-  exclude_dir = ["assets", "tmp", "vendor"]  # โฟลเดอร์ที่ไม่ต้อง monitor
+  exclude_dir = ["tmp", "vendor"]       # โฟลเดอร์ที่ไม่ต้อง monitor
   exclude_regex = ["_test.go"]          # ไม่ monitor ไฟล์ทดสอบ
   include_ext = ["go"]                  # monitor เฉพาะไฟล์ .go
   stop_on_error = true                  # หยุดทันทีถ้า build มี error
+  poll = true 
 
 [color]
   build = "yellow"                      # สีข้อความระหว่าง build
@@ -23,4 +24,9 @@ tmp_dir = "tmp"
   clean_on_exit = true                  # ลบไฟล์ temp เมื่อออกจากโปรแกรม
 
 [screen]
-  clear_on_rebuild = true               # ล้างหน้าจอก่อน build ใหม่
+  clear_on_rebuild = false               # ล้างหน้าจอก่อน build ใหม่
+
+[proxy]
+  enabled = true
+  proxy_port = 8081
+  app_port = 8080
