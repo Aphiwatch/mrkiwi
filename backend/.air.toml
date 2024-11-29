@@ -1,0 +1,26 @@
+root = "."
+tmp_dir = "tmp"
+
+[build]
+  bin = "./main"                        # ไฟล์ที่สร้างขึ้นหลัง build
+  cmd = "go build -o ./main ."          # คำสั่ง build โค้ด
+  delay = 1000                          # หน่วงเวลา 1 วินาทีระหว่าง build
+  exclude_dir = ["assets", "tmp", "vendor"]  # โฟลเดอร์ที่ไม่ต้อง monitor
+  exclude_regex = ["_test.go"]          # ไม่ monitor ไฟล์ทดสอบ
+  include_ext = ["go"]                  # monitor เฉพาะไฟล์ .go
+  stop_on_error = true                  # หยุดทันทีถ้า build มี error
+
+[color]
+  build = "yellow"                      # สีข้อความระหว่าง build
+  runner = "green"                      # สีข้อความระหว่างรันโปรแกรม
+  watcher = "cyan"                      # สีข้อความสำหรับ watcher
+
+[log]
+  silent = false                        # แสดง log ทั้งหมด
+  time = true                           # แสดง timestamp ใน log
+
+[misc]
+  clean_on_exit = true                  # ลบไฟล์ temp เมื่อออกจากโปรแกรม
+
+[screen]
+  clear_on_rebuild = true               # ล้างหน้าจอก่อน build ใหม่
