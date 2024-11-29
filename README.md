@@ -2,11 +2,13 @@
 
 > ## First Step
 
->create .env file in root mrkiwi/
+1. create .env file in root mrkiwi/
+
 and add 
-POSTGRES_DB=your_db
-POSTGRES_USER=your_user
-POSTGRES_PASSWORD=your_password 
+- POSTGRES_DB=your_db
+- POSTGRES_USER=your_user
+- POSTGRES_PASSWORD=your_password
+
 in .env file already
 
 > ## Step 2
