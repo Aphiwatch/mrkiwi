@@ -2,8 +2,8 @@ root = "."
 tmp_dir = "tmp"
 
 [build]
-  bin = "./main"                        # ไฟล์ที่สร้างขึ้นหลัง build
-  cmd = "go build -o ./main ."          # คำสั่ง build โค้ด
+  bin = "./cmd/api/main"                        # ไฟล์ที่สร้างขึ้นหลัง build
+  cmd = "go build -o ./cmd/api/main ./cmd/api/main.go"          # คำสั่ง build โค้ด
   delay = 1000                          # หน่วงเวลา 1 วินาทีระหว่าง build
   exclude_dir = ["tmp", "vendor"]       # โฟลเดอร์ที่ไม่ต้อง monitor
   exclude_regex = ["_test.go"]          # ไม่ monitor ไฟล์ทดสอบ

@@ -8,4 +8,6 @@ COPY go.* ./
 
 RUN go mod download
 
+COPY . .
+
 CMD ["air", "-c", ".air.toml"]
